@@ -17,6 +17,7 @@
 		3FC8826529DF025F0086075A /* WeatherModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8826429DF025F0086075A /* WeatherModelView.swift */; };
 		3FC8826829DF02850086075A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC8826729DF02850086075A /* Alamofire */; };
 		3FC8826B29DF028E0086075A /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FC8826A29DF028E0086075A /* SwiftyJSON */; };
+		3FC8827029DF068D0086075A /* NetatmoCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3FC8824D29DEF9C70086075A /* WeatherAppMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacUITests.swift; sourceTree = "<group>"; };
 		3FC8824F29DEF9C70086075A /* WeatherAppMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FC8826429DF025F0086075A /* WeatherModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModelView.swift; sourceTree = "<group>"; };
+		3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetatmoCredentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +103,13 @@
 		3FC8823029DEF9C60086075A /* WeatherAppMac */ = {
 			isa = PBXGroup;
 			children = (
+				3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */,
 				3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */,
 				3FC8823329DEF9C60086075A /* ContentView.swift */,
+				3FC8826429DF025F0086075A /* WeatherModelView.swift */,
 				3FC8823529DEF9C70086075A /* Assets.xcassets */,
 				3FC8823A29DEF9C70086075A /* WeatherAppMac.entitlements */,
 				3FC8823729DEF9C70086075A /* Preview Content */,
-				3FC8826429DF025F0086075A /* WeatherModelView.swift */,
 			);
 			path = WeatherAppMac;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC8823429DEF9C60086075A /* ContentView.swift in Sources */,
+				3FC8827029DF068D0086075A /* NetatmoCredentials.swift in Sources */,
 				3FC8826529DF025F0086075A /* WeatherModelView.swift in Sources */,
 				3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */,
 			);

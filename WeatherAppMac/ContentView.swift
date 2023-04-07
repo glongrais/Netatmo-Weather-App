@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel: WeatherViewModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Current temperature: \(viewModel.temperature)")
+            Text("Current humidity: \(viewModel.humidity)")
+            Text("Current CO2: \(viewModel.co2)")
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: WeatherViewModel())
     }
 }
