@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F22737C29E35724009D11F4 /* TokenModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F22737B29E35724009D11F4 /* TokenModelView.swift */; };
 		3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */; };
 		3FC8823429DEF9C60086075A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823329DEF9C60086075A /* ContentView.swift */; };
 		3FC8823629DEF9C70086075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8823529DEF9C70086075A /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F22737B29E35724009D11F4 /* TokenModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenModelView.swift; sourceTree = "<group>"; };
 		3FC8822E29DEF9C60086075A /* WeatherAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacApp.swift; sourceTree = "<group>"; };
 		3FC8823329DEF9C60086075A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */,
 				3FC8823329DEF9C60086075A /* ContentView.swift */,
 				3FC8826429DF025F0086075A /* WeatherModelView.swift */,
+				3F22737B29E35724009D11F4 /* TokenModelView.swift */,
 				3FC8823529DEF9C70086075A /* Assets.xcassets */,
 				3FC8823A29DEF9C70086075A /* WeatherAppMac.entitlements */,
 				3FC8823729DEF9C70086075A /* Preview Content */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F22737C29E35724009D11F4 /* TokenModelView.swift in Sources */,
 				3FC8823429DEF9C60086075A /* ContentView.swift in Sources */,
 				3FC8827029DF068D0086075A /* NetatmoCredentials.swift in Sources */,
 				3FC8826529DF025F0086075A /* WeatherModelView.swift in Sources */,

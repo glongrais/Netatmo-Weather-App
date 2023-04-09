@@ -8,7 +8,6 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
-//import NetatmoCredentials
 
 class WeatherViewModel: ObservableObject {
     @Published var temperature: String = ""
