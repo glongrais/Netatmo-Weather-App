@@ -8,6 +8,7 @@
 import Foundation
 
 struct Weather {
+    let time: Date
     let temperature: Double
     let humidity: Int
     let co2: Int
@@ -21,6 +22,7 @@ struct Weather {
 
 extension Weather: Decodable {
     private enum CodingKeys: String, CodingKey {
+        case time = "time_utc"
         case temperature = "Temperature"
         case humidity = "Humidity"
         case co2 = "CO2"
@@ -34,6 +36,7 @@ extension Weather: Decodable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
+        let rawTime = try? values.decode(Date.self, forKey: .time)
         let rawTemperature = try? values.decode(Double.self, forKey: .temperature)
         let rawHumidity = try? values.decode(Int.self, forKey: .humidity)
         let rawCo2 = try? values.decode(Int.self, forKey: .co2)
@@ -44,7 +47,8 @@ extension Weather: Decodable {
         let rawDateMaxTemp = try? values.decode(Date.self, forKey: .dateMaxTemp)
         let rawTempTrend = try? values.decode(String.self, forKey: .tempTrend)
         
-        guard let temperature = rawTemperature,
+        guard let time = rawTime,
+              let temperature = rawTemperature,
               let humidity = rawHumidity,
               let co2 = rawCo2,
               let noise = rawNoise,
@@ -57,6 +61,7 @@ extension Weather: Decodable {
             throw WeatherError.missingData
         }
         
+        self.time = time
         self.temperature = temperature
         self.humidity = humidity
         self.co2 = co2

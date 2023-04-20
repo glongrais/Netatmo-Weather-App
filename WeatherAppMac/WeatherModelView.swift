@@ -23,7 +23,7 @@ class WeatherViewModel: ObservableObject {
         let parameters = ["access_token": NetatmoCredentials.accessToken, "device_id": NetatmoCredentials.deviceId]
         AF.request(url, parameters: parameters)
             .validate()
-            .responseJSON { response in
+            .responseData { response in
                 switch response.result {
                 case .success(let value):
                     let json = JSON(value)

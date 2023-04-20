@@ -13,7 +13,9 @@ enum WeatherError: Error{
 
 extension WeatherError: LocalizedError{
     var errorDescription: String?{
-    case .missingData:
-        return NSLocalizedString("Discarding a weather missing a valid data.", comment: "")
+        switch self{
+        case .missingData:
+            return NSLocalizedString("Discarding a weather missing a valid data.", comment: "")
+        }
     }
 }
