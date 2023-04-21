@@ -23,5 +23,25 @@ final class WeatherAppMacWeatherDecoderTests: XCTestCase {
         XCTAssertEqual(expectedSeconds, decodedSeconds, accuracy: 0.000_01)
         
     }
+    
+    func testNetatmoDecoderDecodesWeatherEmpty() throws {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
+        
+        XCTAssertThrowsError(try decoder.decode(Weather.self, from: testWeatherEmpty)){
+            error in
+            XCTAssertEqual(error as! WeatherError, WeatherError.missingData)
+        }
+    }
+    
+    func testNetatmoDecoderDecodesWeatherMissingData() throws {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .millisecondsSince1970
+        
+        XCTAssertThrowsError(try decoder.decode(Weather.self, from: testWeatherMissingData)){
+            error in
+            XCTAssertEqual(error as! WeatherError, WeatherError.missingData)
+        }
+    }
 
 }
