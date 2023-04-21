@@ -9,6 +9,7 @@ import Foundation
 
 enum WeatherError: Error{
     case missingData
+    case networkError
 }
 
 extension WeatherError: LocalizedError{
@@ -16,6 +17,8 @@ extension WeatherError: LocalizedError{
         switch self{
         case .missingData:
             return NSLocalizedString("Discarding a weather missing a valid data.", comment: "")
+        case .networkError:
+            return NSLocalizedString("Error fetching weather data over the network.", comment: "")
         }
     }
 }
