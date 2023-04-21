@@ -17,6 +17,8 @@
 		3F517C6A29F2C24D00E970F5 /* TestDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6829F2C24D00E970F5 /* TestDownloader.swift */; };
 		3F517C6C29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */; };
 		3F517C6D29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */; };
+		3F517C6F29F2CF5D00E970F5 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */; };
+		3F517C7029F2CF5D00E970F5 /* WeatherClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */; };
 		3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */; };
 		3FC8823429DEF9C60086075A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823329DEF9C60086075A /* ContentView.swift */; };
 		3FC8823629DEF9C70086075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8823529DEF9C70086075A /* Assets.xcassets */; };
@@ -55,6 +57,7 @@
 		3F517C6529F1963100E970F5 /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		3F517C6829F2C24D00E970F5 /* TestDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDownloader.swift; sourceTree = "<group>"; };
 		3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
+		3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		3FC8822E29DEF9C60086075A /* WeatherAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacApp.swift; sourceTree = "<group>"; };
 		3FC8823329DEF9C60086075A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 				3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */,
 				3F517C5F29F17BC700E970F5 /* Weather.swift */,
 				3F517C6329F1939F00E970F5 /* WeatherError.swift */,
+				3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +331,7 @@
 				3FC8826529DF025F0086075A /* WeatherModelView.swift in Sources */,
 				3F517C6029F17BC700E970F5 /* Weather.swift in Sources */,
 				3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */,
+				3F517C6F29F2CF5D00E970F5 /* WeatherClient.swift in Sources */,
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F517C7029F2CF5D00E970F5 /* WeatherClient.swift in Sources */,
 				3F517C6D29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */,
 				3F517C6A29F2C24D00E970F5 /* TestDownloader.swift in Sources */,
 				3FC8824429DEF9C70086075A /* WeatherAppMacWeatherDecoderTests.swift in Sources */,
