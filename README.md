@@ -4,7 +4,7 @@ This Mac app displays weather information about the Netatmo weather station you 
 
 ## Requirements
 
-- Mac OS X 10.13 or later
+- MacOS 13 or later
 - A Netatmo Weather Station
 - A Netatmo account and API key
 
