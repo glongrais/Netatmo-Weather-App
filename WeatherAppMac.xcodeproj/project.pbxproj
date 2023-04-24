@@ -23,6 +23,8 @@
 		3F517C7429F5A65E00E970F5 /* WeatherError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C6329F1939F00E970F5 /* WeatherError.swift */; };
 		3F517C7629F6812700E970F5 /* NetatmoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C7529F6812700E970F5 /* NetatmoJSON.swift */; };
 		3F517C7729F6812700E970F5 /* NetatmoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C7529F6812700E970F5 /* NetatmoJSON.swift */; };
+		3F517C7929F68D4200E970F5 /* WeatherAppMacClientDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C7829F68D4200E970F5 /* WeatherAppMacClientDecoderTests.swift */; };
+		3F517C7A29F68E0800E970F5 /* NetatmoCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */; };
 		3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */; };
 		3FC8823429DEF9C60086075A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823329DEF9C60086075A /* ContentView.swift */; };
 		3FC8823629DEF9C70086075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8823529DEF9C70086075A /* Assets.xcassets */; };
@@ -63,6 +65,7 @@
 		3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPDataDownloader.swift; sourceTree = "<group>"; };
 		3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherClient.swift; sourceTree = "<group>"; };
 		3F517C7529F6812700E970F5 /* NetatmoJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetatmoJSON.swift; sourceTree = "<group>"; };
+		3F517C7829F68D4200E970F5 /* WeatherAppMacClientDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacClientDecoderTests.swift; sourceTree = "<group>"; };
 		3FC8822E29DEF9C60086075A /* WeatherAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacApp.swift; sourceTree = "<group>"; };
 		3FC8823329DEF9C60086075A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		3F517C5D29F17B7F00E970F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */,
 				3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */,
 				3F517C5F29F17BC700E970F5 /* Weather.swift */,
 				3F517C6329F1939F00E970F5 /* WeatherError.swift */,
@@ -150,7 +154,6 @@
 			children = (
 				3F517C5E29F17B8700E970F5 /* Views */,
 				3F517C5D29F17B7F00E970F5 /* Models */,
-				3FC8826C29DF048C0086075A /* NetatmoCredentials.swift */,
 				3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */,
 				3FC8823329DEF9C60086075A /* ContentView.swift */,
 				3FC8826429DF025F0086075A /* WeatherModelView.swift */,
@@ -176,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				3FC8824329DEF9C70086075A /* WeatherAppMacWeatherDecoderTests.swift */,
+				3F517C7829F68D4200E970F5 /* WeatherAppMacClientDecoderTests.swift */,
 			);
 			path = WeatherAppMacTests;
 			sourceTree = "<group>";
@@ -349,6 +353,8 @@
 			files = (
 				3F517C7029F2CF5D00E970F5 /* WeatherClient.swift in Sources */,
 				3F517C6D29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */,
+				3F517C7929F68D4200E970F5 /* WeatherAppMacClientDecoderTests.swift in Sources */,
+				3F517C7A29F68E0800E970F5 /* NetatmoCredentials.swift in Sources */,
 				3F517C6A29F2C24D00E970F5 /* TestDownloader.swift in Sources */,
 				3FC8824429DEF9C70086075A /* WeatherAppMacWeatherDecoderTests.swift in Sources */,
 				3F517C6729F1963100E970F5 /* TestData.swift in Sources */,
