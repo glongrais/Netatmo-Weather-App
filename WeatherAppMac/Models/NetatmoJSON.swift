@@ -28,6 +28,7 @@ struct NetatmoJSON: Decodable{
         let bodyContainer = try rootContainer.nestedContainer(keyedBy: BodyCodingKeys.self, forKey: .body)
         var devicesContainer = try bodyContainer.nestedUnkeyedContainer(forKey: .devices)
         
+        //TODO: Handle multiple devices. Now only fetch data for the last device
         while !devicesContainer.isAtEnd {
             let dashboardContainer = try devicesContainer.nestedContainer(keyedBy: DeviceCodingKeys.self)
             
