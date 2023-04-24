@@ -21,7 +21,12 @@ actor WeatherClient {
     var weather: Weather {
         get async throws {
             let data = try await downloader.httpData(for: request)
-            return Weather.init(time: Date(timeIntervalSince1970: 11), temperature: 1.0, humidity: 1, co2: 1, noise: 1, minTemp: 1.0, maxTemp: 1.0, dateMinTemp: Date(timeIntervalSince1970: 11), dateMaxTemp: Date(timeIntervalSince1970: 11), tempTrend: "1")
+            let rawWeather = try decoder.decode(NetatmoJSON.self, from: data)
+            var weather = rawWeather.weather
+            
+            //TODO: Add caching feature
+            
+            return weather
         }
     }
     
