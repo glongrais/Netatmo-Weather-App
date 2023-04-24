@@ -8,7 +8,7 @@
 import XCTest
 @testable import WeatherAppMac
 
-final class WeatherAppMacWeatherDecoderTests: XCTestCase {
+final class WeatherDecoderTests: XCTestCase {
 
     func testNetatmoDecoderDecodesWeather() throws {
         let decoder = JSONDecoder()

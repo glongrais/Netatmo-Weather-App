@@ -9,7 +9,7 @@ import XCTest
 @testable import WeatherAppMac
 
 
-final class WeatherAppMacClientDecoderTests: XCTestCase {
+final class ClientDecoderTests: XCTestCase {
 
     func testClientDoesFetchWeatherData() async throws {
         let downloader = TestDownloader()
