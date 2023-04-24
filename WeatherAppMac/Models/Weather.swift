@@ -75,3 +75,19 @@ extension Weather: Decodable {
     }
 }
 
+extension Weather{
+    static var empty: Weather {
+        var weather = Weather(time: Date.now,
+                              temperature: 0.0,
+                              humidity: 0,
+                              co2: 0,
+                              noise: 0,
+                              minTemp: 0,
+                              maxTemp: 0,
+                              dateMinTemp: Date.now,
+                              dateMaxTemp: Date.now,
+                              tempTrend: "")
+        return weather
+    }
+}
+
