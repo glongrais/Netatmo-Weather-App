@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NetatmoJSON: Decodable{
+struct WeatherJSON: Decodable{
     
     private enum RootCodingKeys: String, CodingKey {
         case body
