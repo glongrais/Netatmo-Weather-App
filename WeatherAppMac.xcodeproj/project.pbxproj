@@ -29,7 +29,10 @@
 		3F517C7F29F6E15600E970F5 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */; };
 		3F517C8029F6E15600E970F5 /* WeatherProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */; };
 		3F517C8229F6EB8F00E970F5 /* NetatmoJSONDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C8129F6EB8F00E970F5 /* NetatmoJSONDecoderTests.swift */; };
+		3F9B0B4029F837320050FF20 /* TokenError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B0B3F29F837320050FF20 /* TokenError.swift */; };
+		3F9B0B4429F83A120050FF20 /* TokenDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9B0B4329F83A120050FF20 /* TokenDecoderTests.swift */; };
 		3FB518D029F6F23D0023289D /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB518CF29F6F23D0023289D /* Station.swift */; };
+		3FB518D229F82B160023289D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB518D129F82B160023289D /* Token.swift */; };
 		3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */; };
 		3FC8823629DEF9C70086075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8823529DEF9C70086075A /* Assets.xcassets */; };
 		3FC8823929DEF9C70086075A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8823829DEF9C70086075A /* Preview Assets.xcassets */; };
@@ -71,7 +74,10 @@
 		3F517C7B29F6B29900E970F5 /* NetatmoCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetatmoCredentials.swift; sourceTree = "<group>"; };
 		3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProvider.swift; sourceTree = "<group>"; };
 		3F517C8129F6EB8F00E970F5 /* NetatmoJSONDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetatmoJSONDecoderTests.swift; sourceTree = "<group>"; };
+		3F9B0B3F29F837320050FF20 /* TokenError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenError.swift; sourceTree = "<group>"; };
+		3F9B0B4329F83A120050FF20 /* TokenDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDecoderTests.swift; sourceTree = "<group>"; };
 		3FB518CF29F6F23D0023289D /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		3FB518D129F82B160023289D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		3FC8822E29DEF9C60086075A /* WeatherAppMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherAppMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacApp.swift; sourceTree = "<group>"; };
 		3FC8823529DEF9C70086075A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,13 +120,10 @@
 		3F517C5D29F17B7F00E970F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */,
-				3F517C5F29F17BC700E970F5 /* Weather.swift */,
-				3F517C6329F1939F00E970F5 /* WeatherError.swift */,
-				3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */,
-				3F517C7529F6812700E970F5 /* NetatmoJSON.swift */,
 				3F517C7B29F6B29900E970F5 /* NetatmoCredentials.swift */,
-				3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */,
+				3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */,
+				3FB518D329F82B2A0023289D /* Weather */,
+				3FB518D429F82B560023289D /* Token */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -131,6 +134,45 @@
 				3FB518CF29F6F23D0023289D /* Station.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3F9B0B4129F8377E0050FF20 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3F517C7829F68D4200E970F5 /* ClientDecoderTests.swift */,
+				3FC8824329DEF9C70086075A /* WeatherDecoderTests.swift */,
+				3F517C8129F6EB8F00E970F5 /* NetatmoJSONDecoderTests.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3F9B0B4229F837AB0050FF20 /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				3F9B0B4329F83A120050FF20 /* TokenDecoderTests.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		3FB518D329F82B2A0023289D /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				3F517C5F29F17BC700E970F5 /* Weather.swift */,
+				3F517C6329F1939F00E970F5 /* WeatherError.swift */,
+				3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */,
+				3F517C7529F6812700E970F5 /* NetatmoJSON.swift */,
+				3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		3FB518D429F82B560023289D /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				3FB518D129F82B160023289D /* Token.swift */,
+				3F9B0B3F29F837320050FF20 /* TokenError.swift */,
+			);
+			path = Token;
 			sourceTree = "<group>";
 		};
 		3FC8822529DEF9C60086075A = {
@@ -181,9 +223,8 @@
 		3FC8824229DEF9C70086075A /* WeatherAppMacTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FC8824329DEF9C70086075A /* WeatherDecoderTests.swift */,
-				3F517C7829F68D4200E970F5 /* ClientDecoderTests.swift */,
-				3F517C8129F6EB8F00E970F5 /* NetatmoJSONDecoderTests.swift */,
+				3F9B0B4229F837AB0050FF20 /* Token */,
+				3F9B0B4129F8377E0050FF20 /* Weather */,
 			);
 			path = WeatherAppMacTests;
 			sourceTree = "<group>";
@@ -336,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9B0B4029F837320050FF20 /* TokenError.swift in Sources */,
 				3F517C6929F2C24D00E970F5 /* TestDownloader.swift in Sources */,
 				3F517C7C29F6B29900E970F5 /* NetatmoCredentials.swift in Sources */,
 				3F22737C29E35724009D11F4 /* TokenModelView.swift in Sources */,
@@ -347,6 +389,7 @@
 				3FC8823229DEF9C60086075A /* WeatherAppMacApp.swift in Sources */,
 				3F517C6F29F2CF5D00E970F5 /* WeatherClient.swift in Sources */,
 				3F517C7629F6812700E970F5 /* NetatmoJSON.swift in Sources */,
+				3FB518D229F82B160023289D /* Token.swift in Sources */,
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +409,7 @@
 				3F517C6729F1963100E970F5 /* TestData.swift in Sources */,
 				3F517C7329F5A65A00E970F5 /* Weather.swift in Sources */,
 				3F517C7729F6812700E970F5 /* NetatmoJSON.swift in Sources */,
+				3F9B0B4429F83A120050FF20 /* TokenDecoderTests.swift in Sources */,
 				3F517C7429F5A65E00E970F5 /* WeatherError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

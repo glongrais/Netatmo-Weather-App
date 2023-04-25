@@ -206,3 +206,23 @@ let testNetatmoStationData: Data = """
         "time_server":"1553777827"
     }
     """.data(using: .utf8)!
+
+let testToken: Data = """
+    {
+        "access_token": "token1",
+        "expires_in": 1,
+        "refresh_token": "refresh1"
+    }
+    """.data(using: .utf8)!
+
+let testTokenEmpty: Data = """
+    {
+    }
+    """.data(using: .utf8)!
+
+let testTokenMissingData: Data = """
+    {
+        "access_token": "token1",
+        "refresh_token": "refresh1"
+    }
+    """.data(using: .utf8)!
