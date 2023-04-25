@@ -8,7 +8,6 @@
 import Foundation
 
 actor WeatherClient {
-    private let feedURL = URL(string: "https://api.netatmo.com/api/getstationsdata")!
     private var request: URLRequest
     private lazy var decoder: JSONDecoder = {
         let aDecoder = JSONDecoder()
@@ -32,12 +31,19 @@ actor WeatherClient {
     
     init(downloader: any HTTPDataDownloader = URLSession.shared) {
         self.downloader = downloader
-        self.request = URLRequest(url: feedURL)
-        self.request.httpMethod = "GET"
-        self.request.allHTTPHeaderFields = [
-            "access_token": NetatmoCredentials.accessToken,
-            "device_id": NetatmoCredentials.deviceId
+        
+        var urlComponents = URLComponents(string: "https://api.netatmo.com/api/getstationsdata")!
+        urlComponents.queryItems = [
+            URLQueryItem(name: "device_id", value: NetatmoCredentials.deviceId),
         ]
+
+        let url = urlComponents.url!
+
+        self.request = URLRequest(url: url)
+        self.request.httpMethod = "GET"
+        self.request.addValue("application/json", forHTTPHeaderField: "accept")
+        self.request.addValue("Bearer \(NetatmoCredentials.accessToken)", forHTTPHeaderField: "Authorization")
+
         
     }
 }

@@ -10,10 +10,19 @@ import SwiftUI
 struct Station: View {
     @EnvironmentObject var provider: WeatherProvider
     var body: some View {
-
-            Text("\(provider.weather.co2)")
+        RoundedRectangle(cornerRadius: 5)
+            .fill(.white)
+            .frame(width: 80, height: 60)
+            .overlay{
+                Text("CO2: \(provider.weather.co2)")}
             .task {
-                try? await provider.fetchWeather()
+                do{
+                    try await provider.fetchWeather()}
+                catch let error as WeatherError {
+                    print(error.localizedDescription)
+                } catch {
+                    print("Caught an unexpected error: \(error.localizedDescription)")
+                }
             }
     }
 }

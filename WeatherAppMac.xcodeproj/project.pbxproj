@@ -157,9 +157,9 @@
 		3FC8823029DEF9C60086075A /* WeatherAppMac */ = {
 			isa = PBXGroup;
 			children = (
+				3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */,
 				3F517C5E29F17B8700E970F5 /* Views */,
 				3F517C5D29F17B7F00E970F5 /* Models */,
-				3FC8823129DEF9C60086075A /* WeatherAppMacApp.swift */,
 				3F22737B29E35724009D11F4 /* TokenModelView.swift */,
 				3FC8823529DEF9C70086075A /* Assets.xcassets */,
 				3FC8823A29DEF9C70086075A /* WeatherAppMac.entitlements */,
