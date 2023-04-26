@@ -19,8 +19,7 @@ actor TokenClient {
     var token: Token {
         get async throws {
             let data = try await downloader.httpData(for: request)
-            let rawToken = try decoder.decode(TokenJSON.self, from: data)
-            var token = rawToken.token
+            let token = try decoder.decode(Token.self, from: data)
             
             //TODO: Add caching feature
             

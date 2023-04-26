@@ -15,7 +15,8 @@ struct TokenJSON: Decodable {
     private(set) var token: Token = Token.empty
     
     init(from decoder: Decoder) throws {
-        let rootContainer = try decoder.container(keyedBy: RootCodingKeys.self)
+        var rootContainer = try decoder.container(keyedBy: RootCodingKeys.self)
+        print(rootContainer.allKeys)
         if let body = try? rootContainer.decode(Token.self, forKey: .body) {
             self.token = body
         }

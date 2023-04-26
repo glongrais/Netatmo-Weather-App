@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct WeatherAppMacApp: App {
     @StateObject var weatherProvider = WeatherProvider()
+    @StateObject var tokenProvider = TokenProvider()
     var body: some Scene {
         WindowGroup {
             Station()
                 .environmentObject(weatherProvider)
+                .environmentObject(tokenProvider)
         }
     }
 }

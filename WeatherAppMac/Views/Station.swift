@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Station: View {
     @EnvironmentObject var provider: WeatherProvider
+    @EnvironmentObject var token: TokenProvider
     var body: some View {
         RoundedRectangle(cornerRadius: 5)
             .fill(.white)
@@ -16,6 +17,13 @@ struct Station: View {
             .overlay{
                 Text("CO2: \(provider.weather.co2)")}
             .task {
+                do{
+                    try await token.fetchToken()}
+                catch let error as TokenError {
+                    print(error.localizedDescription)
+                } catch {
+                    print("Caught an unexpected error: \(error.localizedDescription)")
+                }
                 do{
                     try await provider.fetchWeather()}
                 catch let error as WeatherError {

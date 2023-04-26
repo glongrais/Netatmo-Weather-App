@@ -26,7 +26,6 @@ extension URLSession: HTTPDataDownloader {
     func httpData(for request: URLRequest) async throws -> Data {
         guard let (data, response) = try await self.data(for: request, delegate: nil) as? (Data, HTTPURLResponse),
               validStatus.contains(response.statusCode) else {
-            print("hey")
             throw WeatherError.networkError
         }
         return data
