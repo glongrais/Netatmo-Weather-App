@@ -43,7 +43,7 @@ class NetatmoJSONDecoderTests: XCTestCase {
         decoder.dateDecodingStrategy = .millisecondsSince1970
         
         do {
-            let netatmoJSON = try decoder.decode(NetatmoJSON.self, from: jsonData)
+            let netatmoJSON = try decoder.decode(WeatherJSON.self, from: jsonData)
             XCTAssertEqual(netatmoJSON.weather.time, dateFromMilliseconds(1674357600000))
             XCTAssertEqual(netatmoJSON.weather.temperature, 20.5)
             XCTAssertEqual(netatmoJSON.weather.humidity, 50)
@@ -85,7 +85,7 @@ class NetatmoJSONDecoderTests: XCTestCase {
         let decoder = JSONDecoder()
         
         do {
-            let netatmoJSON = try decoder.decode(NetatmoJSON.self, from: jsonData)
+            let netatmoJSON = try decoder.decode(WeatherJSON.self, from: jsonData)
             XCTAssertTrue(isWeatherEmpty(netatmoJSON.weather))
         } catch {
             XCTFail("Failed to decode NetatmoJSON: \(error)")

@@ -12,7 +12,7 @@ import XCTest
 final class ClientDecoderTests: XCTestCase {
 
     func testClientDoesFetchWeatherData() async throws {
-        let downloader = TestDownloader()
+        let downloader = TestDownloaderWeather()
         let client = WeatherClient(downloader: downloader)
         let weather = try await client.weather
 

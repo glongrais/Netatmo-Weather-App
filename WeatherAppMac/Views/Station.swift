@@ -30,6 +30,6 @@ struct Station: View {
 struct Station_Previews: PreviewProvider {
     static var previews: some View {
         Station()
-            .environmentObject(WeatherProvider(client: WeatherClient(downloader: TestDownloader())))
+            .environmentObject(WeatherProvider(client: WeatherClient(downloader: TestDownloaderWeather())))
     }
 }

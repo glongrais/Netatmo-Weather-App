@@ -20,7 +20,7 @@ actor WeatherClient {
     var weather: Weather {
         get async throws {
             let data = try await downloader.httpData(for: request)
-            let rawWeather = try decoder.decode(NetatmoJSON.self, from: data)
+            let rawWeather = try decoder.decode(WeatherJSON.self, from: data)
             var weather = rawWeather.weather
             
             //TODO: Add caching feature

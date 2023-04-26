@@ -38,3 +38,12 @@ extension Token: Decodable{
         self.refreshToken = refreshToken
     }
 }
+
+extension Token{
+    static var empty: Token {
+        let token = Token(accessToken: "",
+                          expiration: 0,
+                          refreshToken: "")
+        return token
+    }
+}
