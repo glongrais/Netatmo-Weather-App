@@ -2,6 +2,10 @@
 
 This Mac app displays weather information about the Netatmo weather station you have at home. The app uses the Netatmo API to fetch the data.
 
+<p align="center">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="License: MIT">
+</p>
+
 ## Requirements
 
 - MacOS 13 or later
