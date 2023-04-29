@@ -23,4 +23,4 @@ We welcome contributions to this project. If you would like to contribute, pleas
 
 ## License
 
-This app is released under the MIT License. See LICENSE for details.
+This app is released under the MIT License. See [LICENSE](https://github.com/glongrais/Netatmo-Weather-App/blob/main/README.md) for details.
