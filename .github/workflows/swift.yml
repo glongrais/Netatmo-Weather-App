@@ -16,5 +16,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: Run build
+      run: xcodebuild build -scheme WeatherAppMac
     - name: Run tests
       run: xcodebuild test -scheme WeatherAppMac
