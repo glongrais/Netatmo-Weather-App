@@ -10,13 +10,11 @@ import Foundation
 @MainActor
 class TokenProvider: ObservableObject{
     
-    @Published var token: Token = Token.empty
-    
     private  let client: TokenClient
     
     func fetchToken() async throws {
         let latestToken = try await client.token
-        self.token = latestToken
+        NetatmoCredentials.accessToken = latestToken.accessToken
     }
     
     init(client: TokenClient = TokenClient()) {
