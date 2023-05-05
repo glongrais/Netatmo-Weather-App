@@ -11,28 +11,29 @@ struct Station: View {
     @EnvironmentObject var provider: WeatherProvider
     @EnvironmentObject var token: TokenProvider
     var body: some View {
-        RoundedRectangle(cornerRadius: 5)
-            .fill(.white)
-            .frame(width: 80, height: 60)
-            .overlay{
-                Text("CO2: \(provider.weather.co2)")}
-            .task {
-                do{
-                    try await token.fetchToken()}
-                catch let error as TokenError {
-                    print(error.localizedDescription)
-                } catch {
-                    print("Caught an unexpected error: \(error.localizedDescription)")
+        HStack{
+            NumberCardView(value: provider.weather.temperature, label: "Temperature")
+                .task {
+                    do{
+                        try await token.fetchToken()}
+                    catch let error as TokenError {
+                        print(error.localizedDescription)
+                    } catch {
+                        print("Caught an unexpected error: \(error.localizedDescription)")
+                    }
+                    do{
+                        try await provider.fetchWeather()
+                    }
+                    catch let error as WeatherError {
+                        print(error.localizedDescription)
+                    } catch {
+                        print("Caught an unexpected error: \(error.localizedDescription)")
+                    }
                 }
-                do{
-                    try await provider.fetchWeather()
-                }
-                catch let error as WeatherError {
-                    print(error.localizedDescription)
-                } catch {
-                    print("Caught an unexpected error: \(error.localizedDescription)")
-                }
-            }
+            NumberCardView(value: provider.weather.humidity, label: "Humidity")
+            NumberCardView(value: provider.weather.co2, label: "CO2")
+            WifiView(weather: provider.weather)
+        }
     }
 }
 
