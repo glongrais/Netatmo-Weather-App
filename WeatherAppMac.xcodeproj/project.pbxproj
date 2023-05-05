@@ -48,7 +48,7 @@
 		3FC8824429DEF9C70086075A /* WeatherDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8824329DEF9C70086075A /* WeatherDecoderTests.swift */; };
 		3FC8824E29DEF9C70086075A /* WeatherAppMacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8824D29DEF9C70086075A /* WeatherAppMacUITests.swift */; };
 		3FC8825029DEF9C70086075A /* WeatherAppMacUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8824F29DEF9C70086075A /* WeatherAppMacUITestsLaunchTests.swift */; };
-		3FF3C7A72A03DE9500C6ECBE /* WeatherWifiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7A62A03DE9500C6ECBE /* WeatherWifiColor.swift */; };
+		3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */; };
 		3FF3C7A92A03EC2A00C6ECBE /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7A82A03EC2A00C6ECBE /* Module.swift */; };
 		3FF3C7AB2A0555B300C6ECBE /* NumberCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AA2A0555B300C6ECBE /* NumberCardView.swift */; };
 /* End PBXBuildFile section */
@@ -102,7 +102,7 @@
 		3FC8824929DEF9C70086075A /* WeatherAppMacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppMacUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC8824D29DEF9C70086075A /* WeatherAppMacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacUITests.swift; sourceTree = "<group>"; };
 		3FC8824F29DEF9C70086075A /* WeatherAppMacUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppMacUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3FF3C7A62A03DE9500C6ECBE /* WeatherWifiColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWifiColor.swift; sourceTree = "<group>"; };
+		3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherColor.swift; sourceTree = "<group>"; };
 		3FF3C7A82A03EC2A00C6ECBE /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		3FF3C7AA2A0555B300C6ECBE /* NumberCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,7 +180,7 @@
 				3F517C6E29F2CF5D00E970F5 /* WeatherClient.swift */,
 				3F517C7529F6812700E970F5 /* WeatherJSON.swift */,
 				3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */,
-				3FF3C7A62A03DE9500C6ECBE /* WeatherWifiColor.swift */,
+				3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */,
 				3FF3C7A82A03EC2A00C6ECBE /* Module.swift */,
 			);
 			path = Weather;
@@ -414,7 +414,7 @@
 				3F517C7629F6812700E970F5 /* WeatherJSON.swift in Sources */,
 				3FB518D229F82B160023289D /* Token.swift in Sources */,
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
-				3FF3C7A72A03DE9500C6ECBE /* WeatherWifiColor.swift in Sources */,
+				3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */,
 				3F9B0B4A29F93A500050FF20 /* TestDownloaderToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
