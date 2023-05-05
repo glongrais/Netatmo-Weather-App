@@ -32,7 +32,9 @@ class NetatmoJSONDecoderTests: XCTestCase {
                             "date_min_temp": 1674308400000,
                             "date_max_temp": 1674354000000,
                             "temp_trend": "stable"
-                        }
+                        },
+                        "wifi_status": 55,
+                        "module_name": "Indoor"
                     }
                 ]
             }
@@ -54,6 +56,8 @@ class NetatmoJSONDecoderTests: XCTestCase {
             XCTAssertEqual(netatmoJSON.weather.dateMinTemp, dateFromMilliseconds(1674308400000))
             XCTAssertEqual(netatmoJSON.weather.dateMaxTemp, dateFromMilliseconds(1674354000000))
             XCTAssertEqual(netatmoJSON.weather.tempTrend, "stable")
+            XCTAssertEqual(netatmoJSON.weather.moduleName, "Indoor")
+            XCTAssertEqual(netatmoJSON.weather.wifiStatus, 55)
         } catch {
             XCTFail("Failed to decode NetatmoJSON: \(error)")
         }
@@ -87,6 +91,8 @@ class NetatmoJSONDecoderTests: XCTestCase {
         do {
             let netatmoJSON = try decoder.decode(WeatherJSON.self, from: jsonData)
             XCTAssertTrue(isWeatherEmpty(netatmoJSON.weather))
+        } catch WeatherError.missingData {
+            XCTAssertTrue(isWeatherEmpty(Weather.empty))
         } catch {
             XCTFail("Failed to decode NetatmoJSON: \(error)")
         }

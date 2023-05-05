@@ -25,7 +25,8 @@ struct Station: View {
                     print("Caught an unexpected error: \(error.localizedDescription)")
                 }
                 do{
-                    try await provider.fetchWeather()}
+                    try await provider.fetchWeather()
+                }
                 catch let error as WeatherError {
                     print(error.localizedDescription)
                 } catch {

@@ -17,10 +17,6 @@ struct WeatherJSON: Decodable{
         case devices
     }
     
-    private enum DeviceCodingKeys: String, CodingKey {
-        case dashboard = "dashboard_data"
-    }
-    
     private(set) var weather: Weather = Weather.empty
     
     init(from decoder: Decoder) throws {
@@ -30,10 +26,15 @@ struct WeatherJSON: Decodable{
         
         //TODO: Handle multiple devices. Now only fetch data for the last device
         while !devicesContainer.isAtEnd {
-            let dashboardContainer = try devicesContainer.nestedContainer(keyedBy: DeviceCodingKeys.self)
-            
-            if let dashboard = try? dashboardContainer.decode(Weather.self, forKey: .dashboard) {
-                self.weather = dashboard
+            do {
+                let device = try devicesContainer.decode(Weather.self)
+                self.weather = device
+            } catch WeatherError.missingData {
+                // Rethrow the error
+                throw WeatherError.missingData
+            } catch {
+                // Catch other errors and rethrow them
+                throw error
             }
         }
     }

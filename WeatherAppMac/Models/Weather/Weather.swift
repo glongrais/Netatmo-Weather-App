@@ -8,6 +8,7 @@
 import Foundation
 
 struct Weather {
+    let moduleName: String
     let time: Date
     let temperature: Double
     let humidity: Int
@@ -18,10 +19,17 @@ struct Weather {
     let dateMinTemp: Date
     let dateMaxTemp: Date
     let tempTrend: String
+    let wifiStatus: Int
 }
 
 extension Weather: Decodable {
     private enum CodingKeys: String, CodingKey {
+        case moduleName = "module_name"
+        case wifiStatus = "wifi_status"
+        case dashboardData = "dashboard_data"
+    }
+    
+    private enum DashboardDataCodingKeys: String, CodingKey {
         case time = "time_utc"
         case temperature = "Temperature"
         case humidity = "Humidity"
@@ -36,16 +44,20 @@ extension Weather: Decodable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        let rawTime = try? values.decode(Date.self, forKey: .time)
-        let rawTemperature = try? values.decode(Double.self, forKey: .temperature)
-        let rawHumidity = try? values.decode(Int.self, forKey: .humidity)
-        let rawCo2 = try? values.decode(Int.self, forKey: .co2)
-        let rawNoise = try? values.decode(Int.self, forKey: .noise)
-        let rawMinTemp = try? values.decode(Double.self, forKey: .minTemp)
-        let rawMaxTemp = try? values.decode(Double.self, forKey: .maxTemp)
-        let rawDateMinTemp = try? values.decode(Date.self, forKey: .dateMinTemp)
-        let rawDateMaxTemp = try? values.decode(Date.self, forKey: .dateMaxTemp)
-        let rawTempTrend = try? values.decode(String.self, forKey: .tempTrend)
+        let rawModuleName = try? values.decode(String.self, forKey: .moduleName)
+        let rawWifiStatus = try? values.decode(Int.self, forKey: .wifiStatus)
+        let dashboardData = try? values.nestedContainer(keyedBy: DashboardDataCodingKeys.self, forKey: .dashboardData)
+        
+        let rawTime = try? dashboardData?.decode(Date.self, forKey: .time)
+        let rawTemperature = try? dashboardData?.decode(Double.self, forKey: .temperature)
+        let rawHumidity = try? dashboardData?.decode(Int.self, forKey: .humidity)
+        let rawCo2 = try? dashboardData?.decode(Int.self, forKey: .co2)
+        let rawNoise = try? dashboardData?.decode(Int.self, forKey: .noise)
+        let rawMinTemp = try? dashboardData?.decode(Double.self, forKey: .minTemp)
+        let rawMaxTemp = try? dashboardData?.decode(Double.self, forKey: .maxTemp)
+        let rawDateMinTemp = try? dashboardData?.decode(Date.self, forKey: .dateMinTemp)
+        let rawDateMaxTemp = try? dashboardData?.decode(Date.self, forKey: .dateMaxTemp)
+        let rawTempTrend = try? dashboardData?.decode(String.self, forKey: .tempTrend)
         
         guard let time = rawTime,
               let temperature = rawTemperature,
@@ -56,7 +68,9 @@ extension Weather: Decodable {
               let maxTemp = rawMaxTemp,
               let dateMinTemp = rawDateMinTemp,
               let dateMaxTemp = rawDateMaxTemp,
-              let tempTrend = rawTempTrend
+              let tempTrend = rawTempTrend,
+              let moduleName = rawModuleName,
+              let wifiStatus = rawWifiStatus
         else {
             throw WeatherError.missingData
         }
@@ -71,13 +85,16 @@ extension Weather: Decodable {
         self.dateMinTemp = dateMinTemp
         self.dateMaxTemp = dateMaxTemp
         self.tempTrend = tempTrend
+        self.moduleName = moduleName
+        self.wifiStatus = wifiStatus
         
     }
 }
 
 extension Weather{
     static var empty: Weather {
-        let weather = Weather(time: Date.now,
+        let weather = Weather(moduleName: "Indoor",
+                              time: Date.now,
                               temperature: 0.0,
                               humidity: 0,
                               co2: 0,
@@ -86,7 +103,8 @@ extension Weather{
                               maxTemp: 0,
                               dateMinTemp: Date.now,
                               dateMaxTemp: Date.now,
-                              tempTrend: "")
+                              tempTrend: "",
+                              wifiStatus: 55)
         return weather
     }
 }

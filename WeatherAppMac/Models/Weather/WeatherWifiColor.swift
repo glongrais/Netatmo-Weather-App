@@ -9,12 +9,12 @@ import SwiftUI
 
 extension Weather{
     var wifiColor: Color{
-        switch temperature{
-        case 1:
+        switch wifiStatus{
+        case 0..<57:
             return .green
-        case 2:
+        case 57..<72:
             return .orange
-        case 3:
+        case 72..<Int.max:
             return .red
         default:
             return .black
