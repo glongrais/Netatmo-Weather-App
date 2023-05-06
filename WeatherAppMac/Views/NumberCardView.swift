@@ -30,8 +30,8 @@ struct NumberCardView<T: LosslessStringConvertible>: View {
 struct NumberCardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            NumberCardView(value: 10, label: "Temperature (Int)", color: .black)
-            NumberCardView(value: 10.5, label: "Temperature (Double)", color: .blue)
+            NumberCardView(value: 10, label: "Temperature (Int)", color: .blue)
+            NumberCardView(value: 17.5, label: "Temperature (Double)", color: .cyan)
         }
     }
 }
