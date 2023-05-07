@@ -18,7 +18,7 @@ This app was developed only for learning purposes and is not an official Netatmo
 
 ## Ressources
 
-[Getting started with Earthquakes](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-earthquakes), official Apple tutoriel.   
+[Getting started with Earthquakes](https://developer.apple.com/tutorials/app-dev-training/getting-started-with-earthquakes), official Apple tutorial.   
 [Netatmo API](https://dev.netatmo.com/apidocumentation/weather)
 
 ## Contributing
