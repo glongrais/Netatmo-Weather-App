@@ -10,6 +10,11 @@ import SwiftUI
 struct Station: View {
     @EnvironmentObject var provider: WeatherProvider
     @EnvironmentObject var token: TokenProvider
+    
+    @State var isLoading = false
+    
+    var lastUpdated = Date.distantFuture.timeIntervalSince1970
+    
     var body: some View {
         HStack{
             NumberCardView(value: provider.weather.temperature, label: "Temperature", color: provider.weather.tempIndoorColor)
@@ -18,6 +23,7 @@ struct Station: View {
             NumberCardView(value: provider.weather.co2, label: "CO2", color: provider.weather.co2IndoorColor)
             WifiView(weather: provider.weather)
         }
+        .toolbar(content: toolbarContent)
         .onAppear {
             Task {
                 do {
@@ -36,6 +42,27 @@ struct Station: View {
                 }
             }
         }
+    }
+}
+
+extension Station {
+    func fetchWeather() async {
+        isLoading = true
+        do {
+            try await token.fetchToken()
+        } catch let error as TokenError {
+            print(error.localizedDescription)
+        } catch {
+            print("Caught an unexpected error: \(error.localizedDescription)")
+        }
+        do {
+            try await provider.fetchWeather()
+        } catch let error as WeatherError {
+            print(error.localizedDescription)
+        } catch {
+            print("Caught an unexpected error: \(error.localizedDescription)")
+        }
+        isLoading = false
     }
 }
 

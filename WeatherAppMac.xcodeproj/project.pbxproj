@@ -51,6 +51,9 @@
 		3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */; };
 		3FF3C7A92A03EC2A00C6ECBE /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7A82A03EC2A00C6ECBE /* Module.swift */; };
 		3FF3C7AB2A0555B300C6ECBE /* NumberCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AA2A0555B300C6ECBE /* NumberCardView.swift */; };
+		3FF3C7AE2A081D1100C6ECBE /* ToolbarStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AD2A081D1100C6ECBE /* ToolbarStatus.swift */; };
+		3FF3C7B02A081F0300C6ECBE /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */; };
+		3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +108,9 @@
 		3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherColor.swift; sourceTree = "<group>"; };
 		3FF3C7A82A03EC2A00C6ECBE /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		3FF3C7AA2A0555B300C6ECBE /* NumberCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCardView.swift; sourceTree = "<group>"; };
+		3FF3C7AD2A081D1100C6ECBE /* ToolbarStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarStatus.swift; sourceTree = "<group>"; };
+		3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
+		3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +152,7 @@
 		3F517C5E29F17B8700E970F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3FF3C7AC2A081CF700C6ECBE /* Toolbar */,
 				3FB518CF29F6F23D0023289D /* Station.swift */,
 				3F4342262A015CBD00D00203 /* WifiView.swift */,
 				3F4342282A015CD400D00203 /* BatteryView.swift */,
@@ -258,6 +265,16 @@
 				3FC8824F29DEF9C70086075A /* WeatherAppMacUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppMacUITests;
+			sourceTree = "<group>";
+		};
+		3FF3C7AC2A081CF700C6ECBE /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				3FF3C7AD2A081D1100C6ECBE /* ToolbarStatus.swift */,
+				3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */,
+				3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */,
+			);
+			path = Toolbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,9 +416,11 @@
 				3F9B0B4029F837320050FF20 /* TokenError.swift in Sources */,
 				3F517C6929F2C24D00E970F5 /* TestDownloaderWeather.swift in Sources */,
 				3F517C7C29F6B29900E970F5 /* NetatmoCredentials.swift in Sources */,
+				3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */,
 				3F9B0B4D29F93F660050FF20 /* TokenProvider.swift in Sources */,
 				3F517C6C29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */,
 				3F517C6629F1963100E970F5 /* TestData.swift in Sources */,
+				3FF3C7B02A081F0300C6ECBE /* RefreshButton.swift in Sources */,
 				3FB518D029F6F23D0023289D /* Station.swift in Sources */,
 				3F517C7F29F6E15600E970F5 /* WeatherProvider.swift in Sources */,
 				3F517C6029F17BC700E970F5 /* Weather.swift in Sources */,
@@ -412,6 +431,7 @@
 				3FF3C7A92A03EC2A00C6ECBE /* Module.swift in Sources */,
 				3F4342272A015CBD00D00203 /* WifiView.swift in Sources */,
 				3F517C7629F6812700E970F5 /* WeatherJSON.swift in Sources */,
+				3FF3C7AE2A081D1100C6ECBE /* ToolbarStatus.swift in Sources */,
 				3FB518D229F82B160023289D /* Token.swift in Sources */,
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
 				3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */,
