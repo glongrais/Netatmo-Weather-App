@@ -13,6 +13,7 @@ struct Station: View {
     
     @State var isLoading = false
     
+    @AppStorage("lastUpdated")
     var lastUpdated = Date.distantFuture.timeIntervalSince1970
     
     var body: some View {
@@ -35,6 +36,8 @@ struct Station: View {
                 }
                 do {
                     try await provider.fetchWeather()
+                    self.lastUpdated = provider.weather.time.timeIntervalSince1970
+                    print(provider.weather.time)
                 } catch let error as WeatherError {
                     print(error.localizedDescription)
                 } catch {
@@ -57,6 +60,7 @@ extension Station {
         }
         do {
             try await provider.fetchWeather()
+            self.lastUpdated = provider.weather.time.timeIntervalSince1970
         } catch let error as WeatherError {
             print(error.localizedDescription)
         } catch {

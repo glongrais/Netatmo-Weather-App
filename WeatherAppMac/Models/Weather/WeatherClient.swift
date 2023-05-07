@@ -11,7 +11,7 @@ actor WeatherClient {
     private var request: URLRequest
     private lazy var decoder: JSONDecoder = {
         let aDecoder = JSONDecoder()
-        aDecoder.dateDecodingStrategy = .millisecondsSince1970
+        aDecoder.dateDecodingStrategy = .secondsSince1970
         return aDecoder
     }()
     
