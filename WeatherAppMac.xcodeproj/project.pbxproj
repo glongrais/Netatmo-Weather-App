@@ -54,6 +54,7 @@
 		3FF3C7AE2A081D1100C6ECBE /* ToolbarStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AD2A081D1100C6ECBE /* ToolbarStatus.swift */; };
 		3FF3C7B02A081F0300C6ECBE /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */; };
 		3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */; };
+		3FF3C7B82A094C4200C6ECBE /* NetatmoCredentials.swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		3FF3C7AD2A081D1100C6ECBE /* ToolbarStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarStatus.swift; sourceTree = "<group>"; };
 		3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
 		3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationToolbar.swift; sourceTree = "<group>"; };
+		3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NetatmoCredentials.swift.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		3F517C5D29F17B7F00E970F5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */,
 				3F517C7B29F6B29900E970F5 /* NetatmoCredentials.swift */,
 				3F517C6B29F2C2B000E970F5 /* HTTPDataDownloader.swift */,
 				3FB518D329F82B2A0023289D /* Weather */,
@@ -388,6 +391,7 @@
 				3F517C6229F17CDB00E970F5 /* README.md in Resources */,
 				3FC8823929DEF9C70086075A /* Preview Assets.xcassets in Resources */,
 				3FC8823629DEF9C70086075A /* Assets.xcassets in Resources */,
+				3FF3C7B82A094C4200C6ECBE /* NetatmoCredentials.swift.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
