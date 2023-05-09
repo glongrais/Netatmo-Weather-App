@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3FB2D62A0A78750053B034 /* TokenClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3FB2D52A0A78750053B034 /* TokenClientTests.swift */; };
 		3F4342272A015CBD00D00203 /* WifiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4342262A015CBD00D00203 /* WifiView.swift */; };
 		3F4342292A015CD400D00203 /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4342282A015CD400D00203 /* BatteryView.swift */; };
 		3F517C6029F17BC700E970F5 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F517C5F29F17BC700E970F5 /* Weather.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F3FB2D52A0A78750053B034 /* TokenClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenClientTests.swift; sourceTree = "<group>"; };
 		3F4342262A015CBD00D00203 /* WifiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiView.swift; sourceTree = "<group>"; };
 		3F4342282A015CD400D00203 /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		3F517C5F29F17BC700E970F5 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				3F9B0B4329F83A120050FF20 /* TokenDecoderTests.swift */,
+				3F3FB2D52A0A78750053B034 /* TokenClientTests.swift */,
 			);
 			path = Token;
 			sourceTree = "<group>";
@@ -257,9 +260,9 @@
 		3FC8824229DEF9C70086075A /* WeatherAppMacTests */ = {
 			isa = PBXGroup;
 			children = (
+				3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */,
 				3F9B0B4229F837AB0050FF20 /* Token */,
 				3F9B0B4129F8377E0050FF20 /* Weather */,
-				3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */,
 			);
 			path = WeatherAppMacTests;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				3FC8824429DEF9C70086075A /* WeatherDecoderTests.swift in Sources */,
 				3F517C6729F1963100E970F5 /* TestData.swift in Sources */,
 				3F517C7329F5A65A00E970F5 /* Weather.swift in Sources */,
+				3F3FB2D62A0A78750053B034 /* TokenClientTests.swift in Sources */,
 				3F9B0B4B29F93A500050FF20 /* TestDownloaderToken.swift in Sources */,
 				3F9C50242A0031C900F033AC /* TokenClient.swift in Sources */,
 				3F517C7729F6812700E970F5 /* WeatherJSON.swift in Sources */,

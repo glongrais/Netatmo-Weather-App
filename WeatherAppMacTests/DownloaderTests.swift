@@ -36,7 +36,6 @@ final class HTTPDataDownloaderTests: XCTestCase {
             let _ = try await sut.httpData(for: request)
             XCTFail("Expected WeatherError.networkError to be thrown")
         } catch {
-            print("Error caught: \(error)")
             XCTAssertEqual(error as? WeatherError, WeatherError.networkError)
         }
     }
