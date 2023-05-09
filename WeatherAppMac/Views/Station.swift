@@ -27,22 +27,7 @@ struct Station: View {
         .toolbar(content: toolbarContent)
         .onAppear {
             Task {
-                do {
-                    try await token.fetchToken()
-                } catch let error as TokenError {
-                    print(error.localizedDescription)
-                } catch {
-                    print("Caught an unexpected error: \(error.localizedDescription)")
-                }
-                do {
-                    try await provider.fetchWeather()
-                    self.lastUpdated = provider.weather.time.timeIntervalSince1970
-                    print(provider.weather.time)
-                } catch let error as WeatherError {
-                    print(error.localizedDescription)
-                } catch {
-                    print("Caught an unexpected error: \(error.localizedDescription)")
-                }
+                await fetchWeather()
             }
         }
     }
@@ -53,20 +38,22 @@ extension Station {
         isLoading = true
         do {
             try await token.fetchToken()
-        } catch let error as TokenError {
-            print(error.localizedDescription)
-        } catch {
-            print("Caught an unexpected error: \(error.localizedDescription)")
-        }
-        do {
             try await provider.fetchWeather()
             self.lastUpdated = provider.weather.time.timeIntervalSince1970
-        } catch let error as WeatherError {
-            print(error.localizedDescription)
         } catch {
-            print("Caught an unexpected error: \(error.localizedDescription)")
+            handleError(error)
         }
         isLoading = false
+    }
+    
+    func handleError(_ error: Error) {
+        if let error = error as? TokenError {
+            print(error.localizedDescription)
+        } else if let error = error as? WeatherError {
+            print(error.localizedDescription)
+        } else {
+            print("Caught an unexpected error: \(error.localizedDescription)")
+        }
     }
 }
 

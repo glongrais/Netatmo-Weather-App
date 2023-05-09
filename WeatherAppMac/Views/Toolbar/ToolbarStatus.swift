@@ -15,7 +15,6 @@ struct ToolbarStatus: View {
         VStack {
             if isLoading {
                 Text("Checking for updates...")
-                Spacer()
             } else {
                 let lastUpdatedDate = Date(timeIntervalSince1970: lastUpdated)
                 Text("Updated \(lastUpdatedDate.formatted(.relative(presentation: .named)))")
