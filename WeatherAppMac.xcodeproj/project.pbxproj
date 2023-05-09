@@ -55,6 +55,7 @@
 		3FF3C7B02A081F0300C6ECBE /* RefreshButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */; };
 		3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */; };
 		3FF3C7B82A094C4200C6ECBE /* NetatmoCredentials.swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */; };
+		3FF3C7BA2A0A728600C6ECBE /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		3FF3C7AF2A081F0300C6ECBE /* RefreshButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshButton.swift; sourceTree = "<group>"; };
 		3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationToolbar.swift; sourceTree = "<group>"; };
 		3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NetatmoCredentials.swift.txt; sourceTree = "<group>"; };
+		3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			children = (
 				3F9B0B4229F837AB0050FF20 /* Token */,
 				3F9B0B4129F8377E0050FF20 /* Weather */,
+				3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */,
 			);
 			path = WeatherAppMacTests;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				3F517C7D29F6B29900E970F5 /* NetatmoCredentials.swift in Sources */,
 				3F517C6A29F2C24D00E970F5 /* TestDownloaderWeather.swift in Sources */,
 				3F9B0B4E29F93F660050FF20 /* TokenProvider.swift in Sources */,
+				3FF3C7BA2A0A728600C6ECBE /* DownloaderTests.swift in Sources */,
 				3FC8824429DEF9C70086075A /* WeatherDecoderTests.swift in Sources */,
 				3F517C6729F1963100E970F5 /* TestData.swift in Sources */,
 				3F517C7329F5A65A00E970F5 /* Weather.swift in Sources */,
