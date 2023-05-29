@@ -17,12 +17,20 @@ struct Station: View {
     var lastUpdated = Date.distantFuture.timeIntervalSince1970
     
     var body: some View {
-        HStack{
-            TempView(value: provider.weather.temperature, label: "Temperature", color: provider.weather.tempIndoorColor, trend: provider.weather.tempTrend)
-            NumberCardView(value: provider.weather.humidity, label: "Humidity", color: provider.weather.humidityIndoorColor)
-            NumberCardView(value: provider.weather.noise, label: "Noise", color: provider.weather.noiseColor)
-            NumberCardView(value: provider.weather.co2, label: "CO2", color: provider.weather.co2IndoorColor)
-            WifiView(weather: provider.weather)
+        VStack{
+            HStack{
+                TempView(value: provider.weather.temperature, label: "Temperature", color: provider.weather.tempIndoorColor, trend: provider.weather.tempTrend)
+                NumberCardView(value: provider.weather.humidity, label: "Humidity", color: provider.weather.humidityIndoorColor)
+                NumberCardView(value: provider.weather.noise, label: "Noise", color: provider.weather.noiseColor)
+                NumberCardView(value: provider.weather.co2, label: "CO2", color: provider.weather.co2IndoorColor)
+                WifiView(color: provider.weather.wifiColor)
+            }
+            HStack{
+                TempView(value: provider.weather.module!.temperature, label: "Temperature", color: provider.weather.module!.tempOutdoorColor, trend: provider.weather.module!.tempTrend)
+                NumberCardView(value: provider.weather.module!.humidity, label: "Humidity", color: provider.weather.module!.humidityOutdoorColor)
+                WifiView(color: provider.weather.module!.rfColor)
+                BatteryView(color: provider.weather.module!.batteryColor)
+            }
         }
         .toolbar(content: toolbarContent)
         .onAppear {

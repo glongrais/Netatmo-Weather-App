@@ -20,6 +20,7 @@ struct Weather {
     let dateMaxTemp: Date
     let tempTrend: String
     let wifiStatus: Int
+    let module: Module?
 }
 
 extension Weather: Decodable {
@@ -27,6 +28,7 @@ extension Weather: Decodable {
         case moduleName = "module_name"
         case wifiStatus = "wifi_status"
         case dashboardData = "dashboard_data"
+        case modules = "modules"
     }
     
     private enum DashboardDataCodingKeys: String, CodingKey {
@@ -47,6 +49,7 @@ extension Weather: Decodable {
         let rawModuleName = try? values.decode(String.self, forKey: .moduleName)
         let rawWifiStatus = try? values.decode(Int.self, forKey: .wifiStatus)
         let dashboardData = try? values.nestedContainer(keyedBy: DashboardDataCodingKeys.self, forKey: .dashboardData)
+        var modulesContainer = try? values.nestedUnkeyedContainer(forKey: .modules)
         
         let rawTime = try? dashboardData?.decode(Date.self, forKey: .time)
         let rawTemperature = try? dashboardData?.decode(Double.self, forKey: .temperature)
@@ -59,6 +62,8 @@ extension Weather: Decodable {
         let rawDateMaxTemp = try? dashboardData?.decode(Date.self, forKey: .dateMaxTemp)
         let rawTempTrend = try? dashboardData?.decode(String.self, forKey: .tempTrend)
         
+        let rawModule = try? modulesContainer?.decode(Module.self)
+        
         guard let time = rawTime,
               let temperature = rawTemperature,
               let humidity = rawHumidity,
@@ -70,7 +75,8 @@ extension Weather: Decodable {
               let dateMaxTemp = rawDateMaxTemp,
               let tempTrend = rawTempTrend,
               let moduleName = rawModuleName,
-              let wifiStatus = rawWifiStatus
+              let wifiStatus = rawWifiStatus,
+              let module = rawModule
         else {
             throw WeatherError.missingData
         }
@@ -87,12 +93,22 @@ extension Weather: Decodable {
         self.tempTrend = tempTrend
         self.moduleName = moduleName
         self.wifiStatus = wifiStatus
-        
+        self.module = module
     }
 }
 
 extension Weather{
     static var empty: Weather {
+        let module = Module(time: Date.now,
+                            temperature: 30,
+                            humidity: 60,
+                            minTemp: 10,
+                            maxTemp: 50,
+                            dateMinTemp: Date.now,
+                            dateMaxTemp: Date.now,
+                            tempTrend: "stable",
+                            rfStatus: 50,
+                            batteryPercent: 50)
         let weather = Weather(moduleName: "Indoor",
                               time: Date.now,
                               temperature: 0.0,
@@ -104,7 +120,8 @@ extension Weather{
                               dateMinTemp: Date.now,
                               dateMaxTemp: Date.now,
                               tempTrend: "up",
-                              wifiStatus: 55)
+                              wifiStatus: 55,
+                              module: module)
         return weather
     }
 }

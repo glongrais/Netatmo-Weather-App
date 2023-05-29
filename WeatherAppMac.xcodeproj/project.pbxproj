@@ -59,6 +59,7 @@
 		3FF3C7BA2A0A728600C6ECBE /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */; };
 		3FF96D1B2A24F82E003D950C /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96D1A2A24F82E003D950C /* TrendView.swift */; };
 		3FF96D1D2A24FDC3003D950C /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96D1C2A24FDC3003D950C /* TempView.swift */; };
+		3FF96D1F2A250B7C003D950C /* ModuleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96D1E2A250B7C003D950C /* ModuleColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
 		3FF96D1A2A24F82E003D950C /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
 		3FF96D1C2A24FDC3003D950C /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		3FF96D1E2A250B7C003D950C /* ModuleColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 				3F517C7E29F6E15600E970F5 /* WeatherProvider.swift */,
 				3FF3C7A62A03DE9500C6ECBE /* WeatherColor.swift */,
 				3FF3C7A82A03EC2A00C6ECBE /* Module.swift */,
+				3FF96D1E2A250B7C003D950C /* ModuleColor.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
 				3FF96D1B2A24F82E003D950C /* TrendView.swift in Sources */,
 				3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */,
+				3FF96D1F2A250B7C003D950C /* ModuleColor.swift in Sources */,
 				3F9B0B4A29F93A500050FF20 /* TestDownloaderToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

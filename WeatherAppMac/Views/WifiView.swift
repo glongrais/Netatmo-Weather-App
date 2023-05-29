@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct WifiView: View {
-    var weather: Weather
+    var color: Color
     
     var body: some View {
-        Image(systemName: "wifi").foregroundColor(weather.wifiColor)
+        Image(systemName: "wifi").foregroundColor(color)
     }
 }
 
 struct WifiView_Previews: PreviewProvider {
-    static var previewWeather = Weather.empty
     static var previews: some View {
-        WifiView(weather: previewWeather)
+        WifiView(color: .red)
     }
 }

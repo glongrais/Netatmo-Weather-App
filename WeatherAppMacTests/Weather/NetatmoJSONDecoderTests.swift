@@ -70,7 +70,7 @@ class NetatmoJSONDecoderTests: XCTestCase {
                weather.noise == 0 &&
                weather.minTemp == 0 &&
                weather.maxTemp == 0 &&
-               weather.tempTrend.isEmpty
+               weather.tempTrend == "up"
     }
 
     func testNetatmoJSONDecodingWithMissingDashboardData() {
