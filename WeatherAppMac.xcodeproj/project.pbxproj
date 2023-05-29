@@ -57,6 +57,8 @@
 		3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */; };
 		3FF3C7B82A094C4200C6ECBE /* NetatmoCredentials.swift.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */; };
 		3FF3C7BA2A0A728600C6ECBE /* DownloaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */; };
+		3FF96D1B2A24F82E003D950C /* TrendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96D1A2A24F82E003D950C /* TrendView.swift */; };
+		3FF96D1D2A24FDC3003D950C /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF96D1C2A24FDC3003D950C /* TempView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		3FF3C7B52A0822ED00C6ECBE /* StationToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationToolbar.swift; sourceTree = "<group>"; };
 		3FF3C7B72A094C4200C6ECBE /* NetatmoCredentials.swift.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NetatmoCredentials.swift.txt; sourceTree = "<group>"; };
 		3FF3C7B92A0A728600C6ECBE /* DownloaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloaderTests.swift; sourceTree = "<group>"; };
+		3FF96D1A2A24F82E003D950C /* TrendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendView.swift; sourceTree = "<group>"; };
+		3FF96D1C2A24FDC3003D950C /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 				3F4342262A015CBD00D00203 /* WifiView.swift */,
 				3F4342282A015CD400D00203 /* BatteryView.swift */,
 				3FF3C7AA2A0555B300C6ECBE /* NumberCardView.swift */,
+				3FF96D1A2A24F82E003D950C /* TrendView.swift */,
+				3FF96D1C2A24FDC3003D950C /* TempView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,6 +434,7 @@
 				3F517C7C29F6B29900E970F5 /* NetatmoCredentials.swift in Sources */,
 				3FF3C7B62A0822ED00C6ECBE /* StationToolbar.swift in Sources */,
 				3F9B0B4D29F93F660050FF20 /* TokenProvider.swift in Sources */,
+				3FF96D1D2A24FDC3003D950C /* TempView.swift in Sources */,
 				3F517C6C29F2C2B100E970F5 /* HTTPDataDownloader.swift in Sources */,
 				3F517C6629F1963100E970F5 /* TestData.swift in Sources */,
 				3FF3C7B02A081F0300C6ECBE /* RefreshButton.swift in Sources */,
@@ -444,6 +451,7 @@
 				3FF3C7AE2A081D1100C6ECBE /* ToolbarStatus.swift in Sources */,
 				3FB518D229F82B160023289D /* Token.swift in Sources */,
 				3F517C6429F1939F00E970F5 /* WeatherError.swift in Sources */,
+				3FF96D1B2A24F82E003D950C /* TrendView.swift in Sources */,
 				3FF3C7A72A03DE9500C6ECBE /* WeatherColor.swift in Sources */,
 				3F9B0B4A29F93A500050FF20 /* TestDownloaderToken.swift in Sources */,
 			);

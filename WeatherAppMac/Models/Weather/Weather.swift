@@ -103,7 +103,7 @@ extension Weather{
                               maxTemp: 0,
                               dateMinTemp: Date.now,
                               dateMaxTemp: Date.now,
-                              tempTrend: "",
+                              tempTrend: "up",
                               wifiStatus: 55)
         return weather
     }
