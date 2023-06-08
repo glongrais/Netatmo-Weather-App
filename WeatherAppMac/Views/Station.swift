@@ -19,6 +19,7 @@ struct Station: View {
     var body: some View {
         VStack{
             HStack{
+                Image(systemName: "house")
                 TempView(value: provider.weather.temperature, label: "Temperature", color: provider.weather.tempIndoorColor, trend: provider.weather.tempTrend)
                 NumberCardView(value: provider.weather.humidity, label: "Humidity", color: provider.weather.humidityIndoorColor)
                 NumberCardView(value: provider.weather.noise, label: "Noise", color: provider.weather.noiseColor)
@@ -26,6 +27,7 @@ struct Station: View {
                 WifiView(color: provider.weather.wifiColor)
             }
             HStack{
+                Image(systemName: "tree")
                 TempView(value: provider.weather.module!.temperature, label: "Temperature", color: provider.weather.module!.tempOutdoorColor, trend: provider.weather.module!.tempTrend)
                 NumberCardView(value: provider.weather.module!.humidity, label: "Humidity", color: provider.weather.module!.humidityOutdoorColor)
                 WifiView(color: provider.weather.module!.rfColor)
